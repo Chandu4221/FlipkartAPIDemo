@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	.container
+		h2.well.text-center FLipkart Product Feeds
+		.row
+			each product in products.productInfoList
+				.col-md-4.col-sm-6.col-lg-3.col-xs-12
+					.thumbnail.mythumbnail
+						.myimgContainer.text-center
+							img(src=product.productBaseInfoV1.imageUrls["200x200"]).img-responsive.myimg.center-block
+						hr
+						.bg-info.caption.info-section
+							a(href=product.productBaseInfoV1.productUrl)
+								h4.text-center= product.productBaseInfoV1.title

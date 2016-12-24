@@ -1,0 +1,32 @@
+/*
+	for categories Page
+*/
+.mycategories
+{
+	word-wrap: break-word;
+	text-transform: capitalize;
+}
+
+
+/*
+	for Products Page
+*/
+.mythumbnail
+{
+	height: 25em;
+}
+.myimgContainer
+{
+	height: 13em;
+}
+.myimg
+{
+	vertical-align: middle;
+}
+
+.info-section
+{
+	height: 8em;
+	vertical-align: middle;
+	text-align: center;
+}

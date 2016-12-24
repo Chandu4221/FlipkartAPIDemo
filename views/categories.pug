@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	.container
+		h1.well.text-center Flipkart Category Feed
+		br
+		each category in categories
+			.col-md-4.col-sm-6.col-lg-3.col-xs-12
+				.text-center.bg-info
+					a(target="_blank", href="/categories/products/"+category.resourceName+"").mycategories
+						p.well= category.resourceName
