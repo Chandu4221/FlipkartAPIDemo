@@ -1,10 +1,10 @@
-extends layout
+extends navigation
 
-block content
+block navigation
 	.container
-		.row
-			.col-lg-12.text-center
-				.well
-					h1 Welcome to #{title}
-				.well
-					a(href="/categories") Click Here to Begin
+		.row.index-style
+			.col-lg-12.col-md-12.col-sm-12.col-xs-12.text-center
+				.jumbotron
+					h1.display-3= title
+					.well
+						a(href="/categories") Click Here to Begin

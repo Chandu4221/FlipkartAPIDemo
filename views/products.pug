@@ -1,4 +1,4 @@
-extends layout
+extends navigation
 
 block content
 	.container
@@ -21,7 +21,7 @@ block content
 										strong FLipkart Selling Price #{product.flipkartSellingPrice}/-
 								if product.inStock
 									p.alert.alert-warning
-										strong Out of Stock
+										strong In Stock
 								else
 									p.alert.alert-success
-										strong In Stock
+										strong Out of Stock

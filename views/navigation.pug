@@ -1,0 +1,18 @@
+extends layout
+
+block navigation
+	nav.navbar.navbar-inverse
+		.container
+			.navbar-header
+				a(href="/").navbar-brand Flipkart API Demo
+			ul.nav.navbar-nav.navbar-right
+				li
+					a(href="/categories") Category Feed
+				li
+					form.navbar-form.navbar-right(method="POST" action="/categories/products/search")
+						.input-group
+							input(type="text" placeholder="Search" name="keyword").form-control
+							.input-group-btn
+								button(type="submit").btn.btn-default
+									i.glyphicon.glyphicon-search
+	block content

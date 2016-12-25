@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var getCategories = require('../getCategoryFeed.js');
 var getProducts = require('../getProductsFeed.js');
 var keywordSearch = require('../keywordSearch.js');
+/*var getAllOffers = require('../getAllOffers');*/
 
 
 var categories = [];
@@ -43,14 +44,21 @@ router.get('/products/:id',function(req,res){
 		}
 	}
 });
-
-
-/*router.get('/products/:query',function(req,res){
-	keywordSearch(req.params.query,function(searchResult){
-		console.log(searchResult);
-		res.send("searchResult");
-		console.log("keywordSearch working");
+/*
+router.get('/products/alloffers',function(req,res){
+	getAllOffers(function(offers)
+	{
+		res.send("offers");
+		console.log(offers);
 	});
-});*/
+});
+*/
+
+router.post('/products/search',function(req,res){
+	keywordSearch(req.body.keyword,function(searchResult)
+	{
+		res.render("products",{title:req.body.keyword,products:searchResult});
+	});
+});
 
 module.exports = router;

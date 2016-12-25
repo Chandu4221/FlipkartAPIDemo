@@ -1,6 +1,6 @@
-extends layout
+extends navigation
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+	.jumbotron.text-center
+		h1.alert.alert-danger Oops! Something's not right
+		a(href="/").btn.btn-primary Go Back
