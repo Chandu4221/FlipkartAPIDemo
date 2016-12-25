@@ -6,8 +6,10 @@ block navigation
 			.navbar-header
 				a(href="/").navbar-brand Flipkart API Demo
 			ul.nav.navbar-nav.navbar-right
-				li
+				li(id="CategoryFeeds")
 					a(href="/categories") Category Feed
+				li(id="TodaysDeals")
+					a(href="/categories/deals") Today's Deals
 				li
 					form.navbar-form.navbar-right(method="POST" action="/categories/products/search")
 						.input-group

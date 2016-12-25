@@ -7,10 +7,12 @@ var client = affiliate.createClient({
 });
 
 module.exports = function getOffersData(callback){
+  var offers = [];
 	client.getAllOffers(null,function(err, resp){
   	if(!err)
   	{
-    	return callback(resp);
+      var offersData = JSON.parse(resp);
+    	return callback(offersData);
   	}
   	else
     	return callback(err);

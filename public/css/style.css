@@ -26,6 +26,7 @@
 .myimgContainer
 {
 	height: 12em;
+	overflow: hidden;
 }
 .myimg
 {
@@ -62,4 +63,22 @@ a:hover,.anchor-section
 	margin: auto;
 	width:75%;
 	height: 50%;
+}
+
+/* Deals */
+.myDealThumbnail
+{
+	height:20em;
+}
+.myDealThumbnail:hover
+{
+	border:1px solid rgba(0,0,0,0.8);
+}
+.deals-info-section
+{
+	height: 4em;
+	vertical-align: middle;
+	text-align: center;
+	margin:0;
+	background-color: rgba(0,0,0,0.2);
 }

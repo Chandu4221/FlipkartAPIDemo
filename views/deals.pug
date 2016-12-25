@@ -1,0 +1,15 @@
+extends navigation
+
+block content
+	.container
+		h2.well.text-center FLipkart #{title}
+		.row
+			each deal in deals
+				.col-md-4.col-sm-6.col-lg-3.col-xs-12
+					a(href= deal.url, target="blank").anchor-section
+						.thumbnail.myDealThumbnail
+							.myimgContainer.text-center
+								img(src=deal.imageUrl).img-responsive.myimg.center-block
+							hr
+							.bg-info.caption.deals-info-section
+								strong.text-center= deal.title
