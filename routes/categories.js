@@ -3,7 +3,7 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 var getCategories = require('../getCategoryFeed.js');
 var getProducts = require('../getProductsFeed.js');
-var url = "https://affiliate-api.flipkart.net/affiliate/1.0/feeds/krishnacc/category/tyy-n0e.json?expiresAt=1482524098510&sig=e8aaf87a779e953e8413a8fb93b92a52";
+var keywordSearch = require('../keywordSearch.js');
 
 
 var categories = [];
@@ -24,7 +24,7 @@ var products = [];
 	});
 
 router.get('/',function(req,res){
-		res.render("categories",{categories:categories});
+		res.render("categories",{title:"Categories",categories:categories});
 });
 
 router.get('/products/:id',function(req,res){
@@ -37,12 +37,20 @@ router.get('/products/:id',function(req,res){
 					res.sendStatus(404);
 				else
 				{
-					rawData = JSON.parse(data);
-					res.render("products",{products:rawData});
-					//res.send(rawData);
+					res.render("products",{title:req.params.id,products:data});
 				}
 			});
 		}
 	}
 });
+
+
+/*router.get('/products/:query',function(req,res){
+	keywordSearch(req.params.query,function(searchResult){
+		console.log(searchResult);
+		res.send("searchResult");
+		console.log("keywordSearch working");
+	});
+});*/
+
 module.exports = router;

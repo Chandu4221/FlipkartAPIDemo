@@ -6,18 +6,26 @@
 	word-wrap: break-word;
 	text-transform: capitalize;
 }
-
+.mycategories > .well:hover
+{
+	background-color: rgba(66,139,202,0.1);
+	color:rgb(25,25,25);
+}
 
 /*
 	for Products Page
 */
 .mythumbnail
 {
-	height: 25em;
+	height: 32em;
+}
+.mythumbnail:hover
+{
+	border:1px solid rgba(0,0,0,0.8);
 }
 .myimgContainer
 {
-	height: 13em;
+	height: 12em;
 }
 .myimg
 {
@@ -26,7 +34,19 @@
 
 .info-section
 {
-	height: 8em;
+	height: 16em;
 	vertical-align: middle;
 	text-align: center;
+	margin:0;
+	background-color: rgba(0,0,0,0.5);
+}
+.title-section
+{
+	height:6em;
+	background-color: rgba(255,255,255,0.5);
+}
+
+a:hover,.anchor-section
+{
+	text-decoration: none;
 }
